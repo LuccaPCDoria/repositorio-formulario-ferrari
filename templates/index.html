@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário - Ferrari</title>
-    <link rel="shortcut icon" href="img/ferrari-ges (1).svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="../static/img/ferrari-ges (1).svg" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <div class="container">
-        <img src="img/ferrari-6.svg" alt="logo_ferrari">
+        <img src="../static/img/ferrari-6.svg" alt="logo_ferrari">
+        <div id="menu-registro">
+            <a href="cadastro.html" class="cadastro">Cadastro</a>
+            <a href="#" class="login" style="background-color: #A70000;">Login</a>
+        </div>
         <form action="">
             <div class="campo">
                 <label for="email">email:</label>
-                <input type="text" id="email">
+                <input type="email" id="email" required>
             </div>
             <div class="campo">
                 <label for="senha">senha:</label>
-                <input type="password" id="senha">
+                <input type="password" id="senha" required>
             </div>
             <button id="botao-enviar">ENVIAR</button>
         </form>

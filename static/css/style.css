@@ -24,7 +24,7 @@ img{
 
 form{
     background: white;
-    border-radius: 12px;
+    border-radius: 0px 0px 12px 12px;
     font-size: 20px;
     padding: 20px;
 }
@@ -41,17 +41,63 @@ form{
     padding: 15px 12px 15px 12px;
     margin-left: auto;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 2px solid black;
+}
+
+.campo > input:focus{
+    border: 2px solid #EC0000;
+    outline: none;
 }
 
 #botao-enviar{
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 22px;
+    margin-top: 10px;
     height: 40px;
     border-radius: 8px;
     background: #EC0000;
     padding: 8px 0;
     color: white;
     border:none;
+    transition: background-color 0.5s ease-out;
+}
+
+#botao-enviar:hover{
+    background: #A70000;
+    cursor: pointer;
+}
+
+.links {
+    text-decoration: none;
+    color: #EC0000;
+}
+
+.links:hover{
+    color: #A70000;
+}
+#menu-registro{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    height: 48px;
+}
+#menu-registro a{
+    text-decoration: none;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+    border-top: 2px solid white;
+    border-bottom:2px solid white;
+    padding: 10px;
+}
+.login{
+    border-right: 2px solid white;
+    border-left: 1px solid white;
+    border-top-right-radius: 12px;
+
+}
+.cadastro{
+    border-left: 2px solid white;
+    border-right: 1px solid white;
+    border-top-left-radius: 12px;
+}
+#menu-registro a:hover{
+    background-color: #EC0000;
 }

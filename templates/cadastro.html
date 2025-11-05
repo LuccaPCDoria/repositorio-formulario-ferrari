@@ -12,22 +12,22 @@
         <img src="../static/img/ferrari-6.svg" alt="logo_ferrari">
         <div id="menu-registro">
             <a href="#" class="cadastro" style="background-color: #A70000;">Cadastro</a>
-            <a href="index.html" class="login">Login</a>
+            <a href="{{ url_for('index') }}" class="login">Login</a>
         </div>
-        <form action="">
+        <form action="/salvar" method="POST">
             <div class="campo">
                 <label for="nome">nome:</label>
-                <input type="text" id="nome" required>
+                <input type="text" id="nome" name="nome" required>
             </div>
             <div class="campo">
                 <label for="email">email:</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="campo">
                 <label for="senha">senha:</label>
-                <input type="password" id="senha" required>
+                <input type="password" id="senha" name="senha" required>
             </div>
-            <button id="botao-enviar">ENVIAR</button>
+            <button id="botao-enviar" type="submit">ENVIAR</button>
         </form>
     </div>
 </body>

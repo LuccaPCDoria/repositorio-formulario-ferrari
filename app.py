@@ -3,27 +3,27 @@ import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = "chave_secreta_ferrari"  # pode ser qualquer string
+app.secret_key = "chave_secreta_ferrari"
 
 # Configuração do banco de dados
 db = mysql.connector.connect(
     host="localhost",
-    user="root",       # seu usuário do MySQL
-    password="",       # sua senha do MySQL
+    user="root",  # seu usuário MySQL
+    password="mamapapa2901",  # sua senha MySQL
     database="ferrari_db"
 )
 
-# Rota para tela de login
+# Página inicial (login)
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# Rota para tela de cadastro
+# Página de cadastro
 @app.route('/cadastro')
 def cadastro():
     return render_template('cadastro.html')
 
-# Rota para processar o cadastro
+# Salvar novo usuário
 @app.route('/salvar', methods=['POST'])
 def salvar():
     nome = request.form['nome']
@@ -42,7 +42,7 @@ def salvar():
     flash("Usuário cadastrado com sucesso!", "success")
     return redirect(url_for('index'))
 
-# Rota para processar login
+# Login
 @app.route('/login', methods=['POST'])
 def login():
     email = request.form['email']
@@ -54,7 +54,7 @@ def login():
 
     if user and check_password_hash(user['senha'], senha):
         flash(f"Bem-vindo, {user['nome']}!", "success")
-        return "Login bem-sucedido!"  # Aqui você pode redirecionar para outra página (ex: dashboard)
+        return "Login bem-sucedido!"  # depois você pode redirecionar para uma página principal
     else:
         flash("Email ou senha incorretos!", "error")
         return redirect(url_for('index'))

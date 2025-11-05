@@ -14,7 +14,7 @@
             <a href="{{ url_for('cadastro') }}" class="cadastro">Cadastro</a>
             <a href="#" class="login" style="background-color: #A70000;">Login</a>
         </div>
-        <form action="/login" method="POST">
+        <form action="{{ url_for('login') }}" method="POST">
             <div class="campo">
                 <label for="email">email:</label>
                 <input type="email" name="email" id="email" required>

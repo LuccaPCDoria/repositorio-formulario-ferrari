@@ -14,7 +14,7 @@
             <a href="#" class="cadastro" style="background-color: #A70000;">Cadastro</a>
             <a href="{{ url_for('index') }}" class="login">Login</a>
         </div>
-        <form action="/salvar" method="POST">
+        <form action="{{ url_for('salvar') }}" method="POST">
             <div class="campo">
                 <label for="nome">nome:</label>
                 <input type="text" id="nome" name="nome" required>

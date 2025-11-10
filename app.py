@@ -70,7 +70,7 @@ def login():
 
     if user:
         flash("Login bem-sucedido!", "success")
-        return "Login feito com sucesso!"
+        return render_template('dashboard.html')
     else:
         flash("Email ou senha incorretos!", "error")
         return redirect(url_for('index'))
